@@ -1,0 +1,2 @@
+include ':app', ':base', ':network', ':permission', ':diagonallayout'
+rootProject.name='TeamBook'
