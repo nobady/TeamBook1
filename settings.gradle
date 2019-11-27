@@ -1,2 +1,2 @@
-include ':app', ':base', ':network', ':permission', ':diagonallayout'
+include ':app', ':base', ':network', ':diagonallayout'
 rootProject.name='TeamBook'

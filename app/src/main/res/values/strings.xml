@@ -3,4 +3,7 @@
     <string name="input_phone_hint">请输入手机号</string>
     <string name="input_verify_code_hint">请输入验证码</string>
     <string name="next_login">下一步</string>
+    <string name="sign_up">注 册</string>
+    <string name="input_pwd_hint">请输入密码</string>
+    <string name="forget_pwd">忘记密码</string>
 </resources>
