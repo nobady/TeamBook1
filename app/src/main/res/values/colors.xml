@@ -5,24 +5,38 @@
     <color name="colorAccent">#D81B60</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
-    <color name="green_500">#4CAF50</color>
-    <color name="green_50">#E8F5E9</color>
-    <color name="green_100">#C8E6C9</color>
-    <color name="green_200">
+    <color name="c1">#4CAF50</color>
+    <color name="c2">#E8F5E9</color>
+    <color name="c3">#C8E6C9</color>
+    <color name="c4">
         #A5D6A7
     </color>
-    <color name="green_300">#81C784</color>
-    <color name="green_400">#66BB6A</color>
-    <color name="green_600">#43A047</color>
-    <color name="green_700">#388E3C</color>
-    <color name="green_800">
+    <color name="c5">#81C784</color>
+    <color name="c6">#66BB6A</color>
+    <color name="c7">#43A047</color>
+    <color name="c8">#388E3C</color>
+    <color name="c9">
         #2E7D32
     </color>
-    <color name="green_900">#1B5E20</color>
-    <color name="green_A100">#B9F6CA</color>
-    <color name="green_A200">
+    <color name="c10">#1B5E20</color>
+    <color name="c11">#B9F6CA</color>
+    <color name="c12">
         #69F0AE
     </color>
-    <color name="green_A400">#00E676</color>
-    <color name="green_A700">#00C853</color>
+    <color name="c13">#00E676</color>
+    <color name="c14">#00C853</color>
+    <color name="login_btn_text">#000000</color>
+
+    <color name="main_color">#f9a01f</color>
+    <color name="second_color">#FFB242</color>
+    <color name="third_color">#1ea6fd</color>
+    <color name="four_color">#6fc6fd</color>
+    <color name="five_color">#5ff1b6</color>
+    <color name="six_color">#8ff69b</color>
+    <color name="seven_color">#ff8155</color>
+    <color name="eight_color">#ff9671</color>
+    <color name="main_text_color">#1a1a1a</color>
+    <color name="second_text_color">#484848</color>
+    <color name="third_text_color">#a4a6a6</color>
+    <color name="four_text_color">#e1e1e1</color>
 </resources>

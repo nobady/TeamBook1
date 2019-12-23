@@ -19,6 +19,7 @@ abstract class BaseVMActivity<VM : BaseViewModel> : AppCompatActivity(), Lifecyc
         initVM()
         startObserve()
         setContentView(getLayoutResId())
+        mViewModel.initThing()
         initView()
         initData()
     }

@@ -2,8 +2,15 @@
     <string name="app_name">TeamBook</string>
     <string name="input_phone_hint">请输入手机号</string>
     <string name="input_verify_code_hint">请输入验证码</string>
-    <string name="next_login">下一步</string>
+    <string name="input_register_pwd_hint">登录密码(6–12位数字字母组合即可)</string>
+    <string name="next_login">登 录</string>
     <string name="sign_up">注 册</string>
     <string name="input_pwd_hint">请输入密码</string>
     <string name="forget_pwd">忘记密码</string>
+    <string name="to_register">还没有账号，赶快注册一个吧</string>
+    <string name="input_phone_error">请输入正确的手机号</string>
+    <string name="input_pwd_error">密码长度在6–12位之间</string>
+    <string name="register">注 册</string>
+    <string name="today_expenses">今日支出</string>
+    <string name="income">收入</string>
 </resources>

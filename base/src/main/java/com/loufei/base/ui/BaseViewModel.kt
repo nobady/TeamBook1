@@ -1,9 +1,6 @@
 package com.loufei.base.ui
 
-import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import kotlinx.coroutines.*
 
 /**
@@ -13,6 +10,7 @@ open class BaseViewModel : ViewModel(), LifecycleObserver {
 
     val mException: MutableLiveData<Throwable> = MutableLiveData()
 
+    open fun initThing(){}
 
     private fun launchOnUI(block: suspend CoroutineScope.() -> Unit) {
 
@@ -20,9 +18,9 @@ open class BaseViewModel : ViewModel(), LifecycleObserver {
 
     }
 
-    suspend fun <T> launchOnIO(block: suspend CoroutineScope.() -> T) {
-        withContext(Dispatchers.IO) {
-            block
+    fun <T> launchOnIO(block: suspend CoroutineScope.() -> T) {
+        viewModelScope.launch(Dispatchers.IO){
+            block()
         }
     }
 
