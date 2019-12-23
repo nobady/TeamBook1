@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.tabs.TabLayout
+        <LinearLayout
+            android:orientation="horizontal"
             android:id="@+id/tabLayout_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,18 +25,22 @@
             app:tabIndicatorHeight="2dp"
             app:tabMode="scrollable" >
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register"
-                />
+           <com.loufei.teambook.weight.CustomTabItem
+               android:layout_width="50dp"
+               android:gravity="center"
+               android:layout_height="wrap_content"
+               android:layout_margin="@dimen/margin_normal"
+               app:text="@string/register"
+               />
 
-            <com.google.android.material.tabs.TabItem
+            <com.loufei.teambook.weight.CustomTabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/next_login"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:text="@string/next_login"
+                app:isSelect="true"
                 />
-        </com.google.android.material.tabs.TabLayout>
+        </LinearLayout>
 
         <FrameLayout
             android:id="@+id/frameLayout"
