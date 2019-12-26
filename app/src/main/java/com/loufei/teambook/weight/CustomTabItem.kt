@@ -7,9 +7,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.google.android.material.tabs.TabItem
 import com.loufei.teambook.R
-import kotlinx.android.synthetic.main.layout_tab_item.view.*
 
 /**
  * 根据是否选中来改变文本大小的tabItem

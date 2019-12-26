@@ -18,9 +18,8 @@ import com.loufei.teambook.ui.main.MainActivity
 /**
  * Created by lvtengfei on 2019-10-23.
  */
-class LoginActivity : BaseVMActivity<LoginViewModel>() {
+class LoginActivity : BaseVMActivity<LoginViewModel,ActivityLoginBinding>() {
 
-    private val binding by contentView<LoginActivity, ActivityLoginBinding>(R.layout.activity_login)
 
     override fun providerVMClass() = LoginViewModel::class.java
 
@@ -52,15 +51,14 @@ class LoginActivity : BaseVMActivity<LoginViewModel>() {
         phoneEt.textWatcher {
             afterTextChanged {
                 mViewModel.loginDataChange(
-                    phoneEt.text.toString(),
-                    pwdEt.text.toString()
+                    phoneEt.text.toString()
                 )
             }
         }
 
         pwdEt.textWatcher {
             afterTextChanged {
-                mViewModel.loginDataChange(phoneEt.text.toString(), pwdEt.text.toString())
+                mViewModel.loginDataChange(phoneEt.text.toString())
             }
         }
 
@@ -69,10 +67,6 @@ class LoginActivity : BaseVMActivity<LoginViewModel>() {
 
 
     override fun initData() {
-    }
-
-    fun toRegister(view: View) {
-        startKtxActivity<RegisterActivity>()
     }
 
 

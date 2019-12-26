@@ -11,41 +11,24 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="@dimen/margin_normal"
             app:layout_constraintTop_toTopOf="parent"
-            app:tabIndicatorColor="@color/main_color"
-            app:tabTextColor="@color/second_text_color"
-            app:tabSelectedTextColor="@color/main_text_color"
-            app:tabIndicatorHeight="2dp"
-            app:tabMode="scrollable" >
-
-           <com.loufei.teambook.weight.CustomTabItem
-               android:layout_width="50dp"
-               android:gravity="center"
-               android:layout_height="wrap_content"
-               android:layout_margin="@dimen/margin_normal"
-               app:text="@string/register"
-               />
-
-            <com.loufei.teambook.weight.CustomTabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_normal"
-                app:text="@string/next_login"
-                app:isSelect="true"
-                />
-        </LinearLayout>
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="scrollable" />
 
         <FrameLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_normal"
             app:layout_constraintTop_toBottomOf="@id/tabLayout_login" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

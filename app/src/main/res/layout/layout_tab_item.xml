@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/tv_tabItem_text"
         tools:text="demo"
+        android:textSize="14sp"
         />
 
     <ImageView
@@ -19,6 +20,7 @@
         android:layout_height="4dp"
         android:id="@+id/indicator_iv"
         android:layout_marginTop="8dp"
+        android:visibility="gone"
         android:src="@drawable/shape_indicator_bg"
         />
 </LinearLayout>

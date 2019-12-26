@@ -22,8 +22,7 @@ class MainViewModel: BaseViewModel() {
     private val _todayIncome = MutableLiveData<String>()
     val todayIncome:LiveData<String> = _todayIncome
 
-    override fun initThing() {
-        super.initThing()
+    init {
         _totalExpenses.value = "￥0"
         _totalIncome.value = "￥0"
         _todayExpenses.value = "￥0"

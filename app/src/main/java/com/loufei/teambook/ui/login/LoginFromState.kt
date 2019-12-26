@@ -8,5 +8,5 @@ package com.loufei.teambook.ui.login
 data class LoginFromState(
     val phoneError:Int? = null,
     val passwordError:Int? = null,
-    val isDataValid:Boolean = false
+    val isDataValid:Boolean? = false
 )

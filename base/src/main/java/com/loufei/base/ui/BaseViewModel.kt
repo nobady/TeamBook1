@@ -10,8 +10,6 @@ open class BaseViewModel : ViewModel(), LifecycleObserver {
 
     val mException: MutableLiveData<Throwable> = MutableLiveData()
 
-    open fun initThing(){}
-
     private fun launchOnUI(block: suspend CoroutineScope.() -> Unit) {
 
         viewModelScope.launch { block() }

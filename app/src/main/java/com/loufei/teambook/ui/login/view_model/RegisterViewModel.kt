@@ -31,10 +31,6 @@ class RegisterViewModel : BaseViewModel() {
     private val _sendCodeState = MutableLiveData<Boolean>()
     val sendCodeState:LiveData<Boolean> = _sendCodeState
 
-    override fun initThing() {
-        super.initThing()
-        _sendCodeText.value = "发送验证码"
-    }
 
     fun registerDataChange(phone: String, pwd: String) {
         _sendCodeState.value = true

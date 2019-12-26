@@ -15,142 +15,25 @@
         android:layout_height="match_parent"
         tools:context=".ui.main.MainActivity">
 
-        <include
-            android:id="@+id/title_layout"
-            layout="@layout/title_layout" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/main_card"
+        <fragment
+            android:id="@+id/frag_nav_navigation"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_normal"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:layout_constraintTop_toBottomOf="@id/title_layout">
+            android:layout_height="0dp"
+            android:tag="@string/nav_home"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/home_bottom_navigation"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nav_bottom_navigation" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/margin_normal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin_normal"
-                    android:text="本月支出"
-                    android:textSize="@dimen/text_small"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/iv_calendar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin_normal"
-                    android:src="@mipmap/calendar_icon"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_main_expenses"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin_normal"
-                    android:text="@{mainModel.totalExpensesValue}"
-                    android:textColor="@color/c1"
-                    android:textSize="@dimen/large_title"
-                    android:textStyle="bold"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_calendar"
-                    tools:text="￥10000" />
-
-                <ImageView
-                    android:id="@+id/iv_main_show"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_margin="@dimen/margin_normal"
-                    android:src="@drawable/selector_eye"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_calendar" />
-
-                <TextView
-                    android:id="@+id/tv_main_income"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin_normal"
-                    android:text="本月收入"
-                    android:textSize="@dimen/text_small"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_main_expenses" />
-
-                <TextView
-                    android:id="@+id/tv_main_income_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin_normal"
-                    android:text="@{mainModel.totalIncomeValue}"
-                    app:layout_constraintLeft_toRightOf="@id/tv_main_income"
-                    app:layout_constraintTop_toBottomOf="@id/tv_main_expenses"
-                    tools:text="$100" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/tv_main_today_expenses_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_normal"
-            android:text="@string/today_expenses"
-            android:textColor="@color/black"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/main_card" />
-
-
-        <TextView
-            android:id="@+id/tv_main_today_expenses_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_normal"
-            android:text="@{mainModel.todayExpense}"
-            android:textColor="@color/c1"
-            android:textSize="@dimen/title_small"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toRightOf="@id/tv_main_today_expenses_title"
-            app:layout_constraintTop_toBottomOf="@id/main_card"
-            tools:text="$900" />
-
-        <TextView
-            android:id="@+id/tv_main_today_income_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_normal"
-            android:text="@string/income"
-            android:textColor="@color/black"
-            app:layout_constraintLeft_toRightOf="@id/tv_main_today_expenses_value"
-            app:layout_constraintTop_toBottomOf="@id/main_card" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_normal"
-            android:text="@{mainModel.todayIncome}"
-            android:textColor="@color/c1"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toRightOf="@id/tv_main_today_income_title"
-            app:layout_constraintTop_toBottomOf="@id/main_card"
-            tools:text="$899" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/main_recyclerView"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/home_bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_normal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@id/tv_main_today_income_title" />
-
-
+            android:layout_height="@dimen/float_button_size"
+            app:itemTextColor="@color/bottom_nav_text_color_selector"
+            app:itemIconTint="@color/bottom_nav_text_color_selector"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/bottom_navigation" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

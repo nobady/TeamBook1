@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_bottom_navigation"
+    app:startDestination="@id/nav_home">
+
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.loufei.teambook.ui.home.HomeFragment"
+        android:label="@string/nav_home" />
+
+    <fragment
+        android:id="@+id/nav_analysis"
+        android:name="com.loufei.teambook.ui.analysis.AnalysisFragment"
+        android:label="@string/nav_analysis" />
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.loufei.teambook.ui.account.AccountFragment"
+        android:label="@string/nav_account" />
+
+    <fragment
+        android:id="@+id/nav_me"
+        android:name="com.loufei.teambook.ui.me.MeFragment"
+        android:label="@string/nav_me" />
+</navigation>
