@@ -1,20 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="itemModel"
             type="com.loufei.teambook.ui.main.viewmodel.ItemBillViewModel" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/iv_item_main_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/iv_item_main_"
-            />
+            android:layout_margin="@dimen/margin_normal"
+            android:src="@mipmap/canyin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_bill_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:text="陕西肉夹馍"
+            android:textColor="@color/main_text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_item_main_icon"
+            app:layout_constraintLeft_toRightOf="@id/iv_item_main_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_item_main_icon" />
+
+        <TextView
+            android:id="@+id/tv_bill_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:text="4000"
+            android:textColor="@color/second_text_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_item_main_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_item_main_icon" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/margin_normal"
+            android:background="@color/third_text_color"
+            app:layout_constraintTop_toBottomOf="@id/iv_item_main_icon" />
+
+        <com.loufei.teambook.weight.BillItemView
+            android:id="@+id/bill_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            app:firstText="时间"
+            app:billIcon="@mipmap/shijian"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            app:secondText="9:00" />
+
+        <com.loufei.teambook.weight.BillItemView
+            android:id="@+id/bill_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            app:firstText="支付"
+            app:billIcon="@mipmap/zhifu"
+            app:layout_constraintTop_toBottomOf="@id/bill_time"
+            app:secondText="嘴子" />
+
+        <com.loufei.teambook.weight.BillItemView
+            android:id="@+id/bill_fentan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            app:firstText="分摊"
+            app:billIcon="@mipmap/fentan"
+            app:layout_constraintTop_toBottomOf="@id/bill_pay"
+            app:secondText="嘴子皮，凉菜波，胖小龙" />
+
+        <com.loufei.teambook.weight.BillItemView
+            android:id="@+id/bill_renjun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            app:firstText="人均"
+            app:billIcon="@mipmap/renjun"
+            app:layout_constraintTop_toBottomOf="@id/bill_fentan"
+            app:secondText="选择了自定义均摊，请点击查看" />
+
+        <com.loufei.teambook.weight.BillItemView
+            android:id="@+id/bill_shanghu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            app:firstText="商户"
+            app:billIcon="@mipmap/shanghu"
+            app:layout_constraintTop_toBottomOf="@id/bill_renjun"
+            app:secondText="陕西肉夹馍" />
+
+        <com.loufei.teambook.weight.BillItemView
+            android:id="@+id/bill_beizhu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            app:firstText="备注"
+            app:billIcon="@mipmap/beizhu"
+            app:layout_constraintTop_toBottomOf="@id/bill_shanghu"
+            app:secondText="嘴子吃了3个摸，凉菜吃了3盆菜，小龙吃了一个蛋" />
+
+        <com.loufei.teambook.weight.BillItemView
+            android:id="@+id/bill_jilu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            app:firstText="记录"
+            app:billIcon="@mipmap/jilu"
+            app:layout_constraintTop_toBottomOf="@id/bill_beizhu"
+            app:secondText="2019-12-27 09：34" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

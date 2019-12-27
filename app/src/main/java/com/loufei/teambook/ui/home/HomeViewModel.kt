@@ -3,11 +3,21 @@ package com.loufei.teambook.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.loufei.base.ui.BaseViewModel
+import com.loufei.teambook.model.bean.BillDetail
 
 /**
  * Created by lvtengfei on 2019-12-26.
  */
 class HomeViewModel: BaseViewModel() {
+
+    fun getDetailData() {
+        val details = ArrayList<BillDetail>()
+        repeat(10) {
+            details.add(BillDetail(""))
+        }
+        _billDetailList.value = details
+    }
+
     //月支出
     private val _expenseMonthValue = MutableLiveData<String>()
     val expenseMonthValue:LiveData<String> = _expenseMonthValue
@@ -20,6 +30,9 @@ class HomeViewModel: BaseViewModel() {
     //当前账本
     private val _currentBillBook = MutableLiveData<String>()
     val currentBillBook:LiveData<String> = _currentBillBook
+
+    private val _billDetailList = MutableLiveData<List<BillDetail>>()
+    val billDetailList:LiveData<List<BillDetail>> = _billDetailList
 
     init {
         _expenseMonthValue.value = "￥30003"

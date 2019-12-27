@@ -17,17 +17,14 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-
-    <declare-styleable name="CustomTabItem">
-
-        <attr name="text" format="string"/>
-        <attr name="isSelect" format="boolean"/>
-        <attr name="textColor" format="color"/>
-        <attr name="selectedTextColor" format="color"/>
-        <attr name="textSize" format="dimension"/>
-        <attr name="selectedTextSize" format="dimension"/>
-        <attr name="tabIndicatorHeight" format="dimension"/>
-        <attr name="tabIndicatorBackground" format="reference"/>
+    <declare-styleable name="BillItemView">
+        <attr name="firstText" format="string"/>
+        <attr name="firstTextSize" format="dimension"/>
+        <attr name="firstTextColor" format="color" />
+        <attr name="secondText" format="string"/>
+        <attr name="secondTextSize" format="dimension"/>
+        <attr name="secondTextColor" format="color"/>
+        <attr name="billIcon" format="dimension"/>
     </declare-styleable>
 
 </resources>
